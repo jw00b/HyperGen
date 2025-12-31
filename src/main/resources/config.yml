@@ -1,0 +1,72 @@
+language: en
+update-interval: 5
+auto-save-interval: 300
+max-chunks-per-tick: 8
+
+logging:
+  enabled: true
+  interval: 10
+  silent: false
+  console-updates: true
+  detailed-progress: true
+
+normal-mode:
+  chunks-per-second: 40
+  check-interval: 5
+
+pro-mode:
+  target-tps: 19.5
+  min-tps: 18.5
+  max-chunks-per-tick: 16
+  min-chunks-per-tick: 2
+  adjustment-interval: 3
+
+fast-mode:
+  chunks-per-tick: 32
+  disable-spawning: true
+  disable-events: true
+  kick-players: true
+  kick-message: '&c&lServer is processing chunks\n&e&lPlease try again in a few minutes'
+
+default-mode: normal
+default-shape: square
+default-pattern: spiral
+
+notifications:
+  discord:
+    enabled: false
+    webhook: ''
+    notify-start: true
+    notify-complete: true
+    notify-cancel: true
+    notify-progress: true
+    progress-interval: 1000
+  custom:
+    enabled: false
+    webhook: ''
+    notify-start: true
+    notify-complete: true
+    notify-cancel: true
+
+statistics:
+  enabled: true
+  auto-save: true
+  save-interval: 300
+  track-speed: true
+  track-sessions: true
+
+performance:
+  async-chunk-loading: true
+  parallel-processing: true
+  max-concurrent-chunks: 100
+  memory-threshold: 0.85
+  gc-interval: 300
+  auto-pause-on-high-memory: true
+  resume-after-gc: true
+
+features:
+  enable-map: true
+  enable-queue: true
+  enable-statistics: true
+  enable-notifications: true
+  enable-auto-save: true

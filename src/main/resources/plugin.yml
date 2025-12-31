@@ -1,0 +1,176 @@
+name: HyperGen
+version: 2.0.0
+main: ir.hypergen.HyperGen
+api-version: '1.21'
+folia-supported: true
+author: JWOOB
+website: https://github.com/hypergen/HyperGen
+description: Advanced chunk pre-generation plugin with multi-world support and performance optimization
+prefix: HyperGen
+load: POSTWORLD
+
+commands:
+  hypergen:
+    description: Main HyperGen command for chunk pre-generation
+    usage: /<command> <subcommand> [args]
+    aliases: [hgen, hg, chunkygen]
+    permission: hypergen.use
+    permission-message: You don't have permission to use this command!
+
+permissions:
+  hypergen.*:
+    description: Grants all HyperGen permissions
+    default: op
+    children:
+      hypergen.use: true
+      hypergen.admin: true
+      hypergen.start: true
+      hypergen.pause: true
+      hypergen.continue: true
+      hypergen.cancel: true
+      hypergen.world: true
+      hypergen.shape: true
+      hypergen.center: true
+      hypergen.radius: true
+      hypergen.worldborder: true
+      hypergen.spawn: true
+      hypergen.corners: true
+      hypergen.pattern: true
+      hypergen.selection: true
+      hypergen.silent: true
+      hypergen.quiet: true
+      hypergen.progress: true
+      hypergen.map: true
+      hypergen.stats: true
+      hypergen.queue: true
+      hypergen.reload: true
+      hypergen.trim: true
+      hypergen.confirm: true
+      hypergen.bypass: true
+      hypergen.fastmode: true
+      hypergen.info: true
+      hypergen.version: true
+      hypergen.list: true
+  
+  hypergen.use:
+    description: Allows basic HyperGen commands
+    default: op
+  
+  hypergen.admin:
+    description: Allows administrative HyperGen commands
+    default: op
+    children:
+      hypergen.use: true
+      hypergen.start: true
+      hypergen.pause: true
+      hypergen.continue: true
+      hypergen.cancel: true
+      hypergen.reload: true
+  
+  hypergen.start:
+    description: Allows starting chunk generation
+    default: op
+  
+  hypergen.pause:
+    description: Allows pausing chunk generation
+    default: op
+  
+  hypergen.continue:
+    description: Allows resuming chunk generation
+    default: op
+  
+  hypergen.cancel:
+    description: Allows canceling chunk generation
+    default: op
+  
+  hypergen.world:
+    description: Allows setting generation world
+    default: op
+  
+  hypergen.shape:
+    description: Allows setting generation shape
+    default: op
+  
+  hypergen.center:
+    description: Allows setting generation center
+    default: op
+  
+  hypergen.radius:
+    description: Allows setting generation radius
+    default: op
+  
+  hypergen.worldborder:
+    description: Allows setting to world border
+    default: op
+  
+  hypergen.spawn:
+    description: Allows setting to spawn point
+    default: op
+  
+  hypergen.corners:
+    description: Allows setting corners
+    default: op
+  
+  hypergen.pattern:
+    description: Allows setting generation pattern
+    default: op
+  
+  hypergen.selection:
+    description: Allows viewing selection info
+    default: true
+  
+  hypergen.silent:
+    description: Allows toggling silent mode
+    default: op
+  
+  hypergen.quiet:
+    description: Allows setting quiet interval
+    default: op
+  
+  hypergen.progress:
+    description: Allows viewing generation progress
+    default: true
+  
+  hypergen.map:
+    description: Allows viewing progress map
+    default: true
+  
+  hypergen.stats:
+    description: Allows viewing statistics
+    default: true
+  
+  hypergen.queue:
+    description: Allows managing task queue
+    default: op
+  
+  hypergen.reload:
+    description: Allows reloading plugin configuration
+    default: op
+  
+  hypergen.trim:
+    description: Allows trimming world chunks
+    default: op
+  
+  hypergen.confirm:
+    description: Allows confirming fast mode
+    default: op
+  
+  hypergen.bypass:
+    description: Bypasses all HyperGen restrictions
+    default: op
+  
+  hypergen.fastmode:
+    description: Allows using fast mode during generation
+    default: op
+  
+  hypergen.info:
+    description: Allows viewing plugin information
+    default: true
+  
+  hypergen.version:
+    description: Allows viewing plugin version
+    default: true
+  
+  hypergen.list:
+    description: Allows listing all active tasks
+    default: true
